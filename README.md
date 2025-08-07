@@ -2,6 +2,13 @@
 
 A minimalist banking application deployed on Amazon Web Services (AWS) using modern cloud infrastructure and containerization technologies.
 
+
+
+https://github.com/user-attachments/assets/e4a24149-1117-4043-9902-665d47a061e7
+
+
+
+
 ## 🌐 Live Applications
 
 - **AWS ECS Deployment**: [http://project-alb-1953564500.ap-south-1.elb.amazonaws.com](http://project-alb-1953564500.ap-south-1.elb.amazonaws.com)
@@ -63,6 +70,7 @@ sudo yum install -y docker
 sudo service docker start
 sudo usermod -a -G docker ec2-user
 ```
+<img width="1918" height="994" alt="Screenshot 2025-08-06 at 11 25 17 AM" src="https://github.com/user-attachments/assets/14f144b5-26de-45db-8496-9928592f9356" />
 
 ### 2. Build Docker Image and Containerize Application
 
@@ -79,12 +87,17 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ### 3. Create Amazon ECR Repository
 
+<img width="1918" height="975" alt="Screenshot 2025-08-07 at 6 32 59 AM" src="https://github.com/user-attachments/assets/8459601c-127a-4d7f-872c-b5ce700a71bf" />
+
 - **Repository Name**: bankist-app
 - **Region**: ap-south-1 (Mumbai)
 - **Access**: IAM roles and policies configured
 - **Image Scanning**: Enabled for security
 
 ### 4. Configure AWS IAM and Credentials
+
+<img width="1918" height="975" alt="Screenshot 2025-08-07 at 6 32 29 AM" src="https://github.com/user-attachments/assets/0b9944a0-08a5-487a-8e42-e99e2c0c00f4" />
+<img width="1918" height="975" alt="Screenshot 2025-08-07 at 6 39 34 AM" src="https://github.com/user-attachments/assets/952c75bc-796c-47a0-b6eb-32978f509adc" />
 
 - **IAM User**: Created dedicated user for ECR access
 - **Access Keys**: Generated and configured locally
@@ -97,6 +110,8 @@ aws configure
 ```
 
 ### 5. Push Docker Image to ECR
+<img width="1918" height="392" alt="Screenshot 2025-08-07 at 6 48 58 AM" src="https://github.com/user-attachments/assets/d743b1c6-1690-4ebd-a6ab-5648872c2c56" />
+<img width="1918" height="902" alt="Screenshot 2025-08-07 at 6 48 01 AM" src="https://github.com/user-attachments/assets/e0e298fc-49cc-4a0a-8581-087978159f80" />
 
 ```bash
 # Login to ECR
@@ -109,6 +124,8 @@ docker push <account-id>.dkr.ecr.ap-south-1.amazonaws.com/bankist-app:latest
 
 ### 6. Create Application Load Balancer (ALB)
 
+<img width="1918" height="975" alt="Screenshot 2025-08-07 at 6 55 59 AM" src="https://github.com/user-attachments/assets/71a5bd23-fd8b-4307-a715-a52a5f695c9f" />
+
 - **Type**: Application Load Balancer
 - **Scheme**: Internet-facing
 - **Subnets**: Public subnets across multiple AZs
@@ -116,6 +133,10 @@ docker push <account-id>.dkr.ecr.ap-south-1.amazonaws.com/bankist-app:latest
 - **Target Groups**: ECS service integration
 
 ### 7. Configure ECS Cluster and Services
+
+<img width="1918" height="975" alt="Screenshot 2025-08-07 at 7 04 26 AM" src="https://github.com/user-attachments/assets/fb1adc83-8769-45bd-8ba6-0c7e38744184" />
+<img width="1918" height="975" alt="Screenshot 2025-08-07 at 7 19 04 AM" src="https://github.com/user-attachments/assets/b3c11b1f-31c4-4ba0-a8f2-fe96889ab651" />
+<img width="1918" height="975" alt="Screenshot 2025-08-07 at 7 27 57 AM" src="https://github.com/user-attachments/assets/78e9d991-c817-4a7f-b1f2-7a801375373d" />
 
 - **Cluster Type**: Fargate (Serverless)
 - **Task Definition**: CPU and memory specifications
@@ -279,6 +300,6 @@ This project is for educational purposes. The Bankist application design and con
 
 ---
 
-**Deployed by**: [Your Name]  
-**Last Updated**: [Current Date]  
+**Deployed by**: Anshuman Mohapatra  
+**Last Updated**: 07/08/2025  
 **AWS Region**: ap-south-1 (Mumbai)
