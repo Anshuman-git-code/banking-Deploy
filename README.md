@@ -13,7 +13,7 @@ https://github.com/user-attachments/assets/7b701f98-e109-4e16-88af-444cd3c59d93
 
 ## 🏗️ Project Overview
 
-This project demonstrates a complete CI/CD pipeline and cloud deployment strategy for a modern banking web application using AWS services. The application is containerized using Docker and deployed on Amazon ECS with load balancing capabilities.
+This project demonstrates a cloud deployment strategy for a modern banking web application using AWS services. The application is containerized using Docker and deployed on Amazon ECS with load balancing capabilities.
 
 ## 🚀 Features
 
