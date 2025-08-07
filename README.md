@@ -3,10 +3,7 @@
 A minimalist banking application deployed on Amazon Web Services (AWS) using modern cloud infrastructure and containerization technologies.
 
 
-
-https://github.com/user-attachments/assets/e4a24149-1117-4043-9902-665d47a061e7
-
-
+https://github.com/user-attachments/assets/44446d8f-74a8-40b9-b04a-d6a5debdc438
 
 
 ## 🌐 Live Applications
